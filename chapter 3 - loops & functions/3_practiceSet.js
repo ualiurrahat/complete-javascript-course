@@ -1,0 +1,1 @@
+// 1. write a program to print marks of students using a for loop
