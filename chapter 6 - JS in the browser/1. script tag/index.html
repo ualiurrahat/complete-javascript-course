@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS in The Browser</title>
+    <!-- include style file  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<p> Hello Everyone. We are learning how to use JS in the browser.</p>
+<div>advantage of using separate script file using src attribute of script tag:
+    1. separation of concerns: we can add different js file used for different purposes.
+    2. browser caching: if javascript files are not changed, and if we run the website again, then those js files
+    get saved in the browser cache.</div>
+
+
+<!-- js file  -->
+<script src="script.js">
+    console.log("this is bad practice");
+        // this will not be shown in the console.
+        // as we already added script file.
+        // this will be ignored by the browser
+        // it may vary depending on browser.
+</script>
+</body>
+
+</html>
