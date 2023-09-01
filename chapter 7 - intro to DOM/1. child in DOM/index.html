@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child In DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        DOM Tree: refers to the html page where all the nodes are objects. There are 3 types of nodes:
+        <ol>
+            <li>Text Nodes</li>
+            <li>Element Nodes</li>
+            <li>Comment Nodes</li>
+        </ol>
+
+        <p>In html page, &lt;html&gt; is the root and &lt;head&gt; and &lt;body&gt; are its children</p>
+        <p>NOTE: A text node is always a leaf node of the tree</p>
+
+        <strong>Auto Correction</strong> <br>
+        <p>If browser sees any erroneous html, browser tends to correct it</p>
+        <p>This is a paragraph tag</span>
+            <!-- here, closing tag of p is missing. but if you go to browser console, you will see that it is </p> instead of </span> -->
+        <p><strong>Children: </strong> direct as well as deeply nested elements of an element are called children</p>
+        <p><strong>Child Nodes:</strong>Elements that are direct children. For example,&lt;head&gt; and &lt;body&gt; are
+            child of &lt;html&gt; tag</p>
+        <p><strong>Descendant Nodes:</strong>All nested elements,children,their children and so on.</p>
+        <p><strong>DOM Collection:</strong>
+        <ol>
+            <li>Ther are read-only elements</li>
+            <li>iterable using for..of loop</li>
+            <li>Ther are live. elem.childNodes variable(reference) will automatically update if childnodes are changed.
+            </li>
+        </ol>
+        </p>
+    </div>
+    <!-- js file  -->
+    <script src="script.js"></script>
+</body>
+
+</html>
