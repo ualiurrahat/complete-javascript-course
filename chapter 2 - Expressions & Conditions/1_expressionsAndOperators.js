@@ -1,17 +1,17 @@
-
 // expressions: fragments of code that produces a value
 // every value written literally is an expression
-"rahat";
-25;
+//"rahat";
+//25;
 // these are expressions
 
 // arithmetic operators
+// + - / * % ** (var++) (++var) (--var) (var--)
 let a = 25;
 let b = 8;
 console.log("a + b = ", a + b); //addition
 console.log("a - b = ", a - b); // subtraction
-console.log("a * b = ", a * b);// multiplication
-console.log("a / b = ", a / b);// division
+console.log("a * b = ", a * b); // multiplication
+console.log("a / b = ", a / b); // division
 console.log("a % b = ", a % b); // modulus
 console.log("a ** b = ", a ** b); // exponentiation: a ^ b = 2^4 = 16
 console.log("a++ = ", a++); // increment
@@ -20,6 +20,7 @@ console.log("--a = ", --a); // decrement
 console.log("a-- = ", a--);
 
 // assignment operators
+// = += -= *= /= %=
 let c = 10;
 c += 5;
 console.log(c);
@@ -58,3 +59,7 @@ console.log("f != g is ", f != g);
 console.log("f === g is ", f === g);
 
 console.log("f !== g is ", f !== g);
+
+// typeof operator
+console.log(typeof a);
+console.log(typeof null);

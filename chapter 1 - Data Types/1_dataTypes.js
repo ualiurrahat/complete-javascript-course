@@ -1,3 +1,5 @@
+// every value in JS is either object or primitive.
+
 // 7 primitive data types in JS: nn ss bb u
 // null, number, string, symbol, boolean, bigInt, undefined
 let a = null;
@@ -13,11 +15,11 @@ console.log(typeof f);
 // non primitive data type:
 // object, array, function
 const murr = {
-    name: "rahat",
-    age: 24,
-    college: "bsmrstu",
-    status: "learner"
-    // properties like name can be written also "name" and still works fine
+  name: "rahat",
+  age: 24,
+  college: "bsmrstu",
+  status: "learner",
+  // properties like name can be written also "name" and still works fine
 };
 console.log(murr);
 console.log(murr.age);

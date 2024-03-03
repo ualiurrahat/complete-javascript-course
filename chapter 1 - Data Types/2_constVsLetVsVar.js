@@ -1,6 +1,8 @@
 //JS is a dynamically typed language.
 // means its var type can be changed during run time
 // statically typed language are not allowed to do this.
+// actually, JS does not have variable type.
+// it has value type, means var type changes based on value.
 
 var a = "rahat";
 // var can be declared any no. of time
@@ -12,9 +14,9 @@ let b = 25;
 console.log(b);
 
 {
-    // this let is different as it is inside another scope
-    let b = 2;
-    console.log(b);
+  // this let is different as it is inside another scope
+  let b = 2;
+  console.log(b);
 }
 console.log(b);
 // this will print b as it points out to the globally declared b.
