@@ -16,5 +16,3 @@ if (age % 6 == 0) {
 } else if (age % 2 == 0) {
   console.log("divisible by 2 only");
 }
-// ternary operator(?): evaluates a condition and execudes the code based on the condition
-console.log(age > 18 ? "can drive" : "can not drive");
