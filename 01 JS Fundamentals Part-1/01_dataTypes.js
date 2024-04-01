@@ -1,7 +1,7 @@
-// every value in JS is either object or primitive.
+/*every value in JS is either object or primitive.*/
 
-// 7 primitive data types in JS: nn ss bb u
-// null, number, string, symbol, boolean, bigInt, undefined
+/* 7 primitive data types in JS: nn ss bb u
+ null, number, string, symbol, boolean, bigInt, undefined; */
 let a = null;
 let b = 25;
 let c = Symbol("#billionDollar");
