@@ -2,24 +2,28 @@
 // solution:
 console.log("Solution for Question 1 : ..........");
 let result = {
-    minul: 47,
-    rahat: 99,
-    sharif: 2,
-    naeem: 69
-}
+  minul: 47,
+  rahat: 99,
+  sharif: 2,
+  naeem: 69,
+};
 
 //using plain for loop
 for (let i = 0; i < Object.keys(result).length; i++) {
-    console.log("The marks of " + Object.keys(result)[i] + " is " + result[Object.keys(result)[i]]);
+  console.log(
+    "The marks of " +
+      Object.keys(result)[i] +
+      " is " +
+      result[Object.keys(result)[i]]
+  );
 }
 
 // Q2: wrtie the program of Q1 using for-in loop
 // solution:
 console.log("Solution for Question 2 : ..........");
 for (let student in result) {
-    console.log("Marks of ", student + " is ", result[student]);
+  console.log("Marks of ", student + " is ", result[student]);
 }
-
 
 // Q3: write a program to print "try again" untill the user enters the right number
 // solution:
@@ -36,6 +40,6 @@ while (a != 25) {
 // solution:
 console.log("solution for question 4: ..........");
 const mean = (a, b, c, d, e) => {
-    return (a + b + c + d + e) / 5;
-}
+  return (a + b + c + d + e) / 5;
+};
 console.log("mean of 2,8,16,32,64 is : ", mean(2, 8, 16, 32, 64));
