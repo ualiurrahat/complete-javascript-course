@@ -17,6 +17,11 @@ let secretNumber = Math.trunc(Math.random() * 20 + 1);
 let score = 20;
 // to manage high score
 let highScore = 0;
+
+// function to display message
+const displayMessage = function (message) {
+  document.querySelector('.message').textContent = message;
+};
 // handling click events on the 'check' button
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
@@ -26,12 +31,14 @@ document.querySelector('.check').addEventListener('click', function () {
   // case 1: when no number is inserted
   // in the input field but check is  clicked.
   if (!guess) {
-    document.querySelector('.message').textContent = '⛔ No Number!';
+    // document.querySelector('.message').textContent = '⛔ No Number!';
+    displayMessage('⛔ No Number!');
   }
   // case 2: when user wins
   else if (guess === secretNumber) {
     // display correct number message
-    document.querySelector('.message').textContent = '🎉 Correct Number!';
+    // document.querySelector('.message').textContent = '🎉 Correct Number!';
+    displayMessage('🎉 Correct Number!');
     // changing the background of the game
     document.querySelector('body').style.backgroundColor = '#60b347';
     // changing width of the guess element
@@ -44,25 +51,14 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.highscore').textContent = highScore;
     }
   }
-  // case 3: when user guessed number is higher
-  else if (guess > secretNumber) {
-    if (score > 1) {
-      // displayinsg message: number is higher
-      document.querySelector('.message').textContent = '📈 Too High!';
-      // update and show score
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.message').textContent = '💥 You lost the game!';
 
-      document.querySelector('.score').textContent = 0;
-    }
-  }
-  // case 4: when user guessed number is lower
-  else {
+  // case 3: when guess is wrong
+  else if (guess !== secretNumber) {
     if (score > 1) {
       // displayinsg message: number is higher
-      document.querySelector('.message').textContent = '📈 Too Low!';
+      // document.querySelector('.message').textContent =
+      //   guess > secretNumber ? '📈 Too High!' : '📉 Too Low!';
+      displayMessage(guess > secretNumber ? '📈 Too High!' : '📉 Too Low!');
       // update and show score
       score--;
       document.querySelector('.score').textContent = score;
@@ -83,7 +79,8 @@ document.querySelector('.again').addEventListener('click', function () {
   secretNumber = Math.trunc(Math.random() * 20 + 1);
   //3. Restore the initial conditions of the message, number,
   //   score and guess input fields;
-  document.querySelector('.message').textContent = 'Start guessing ...';
+  // document.querySelector('.message').textContent = 'Start guessing ...';
+  displayMessage('Start guessing ...');
   document.querySelector('.score').textContent = score;
   document.querySelector('.number').textContent = '?';
   document.querySelector('.guess').value = '';
