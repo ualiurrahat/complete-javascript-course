@@ -55,9 +55,17 @@ console.log(undefined || null);
 console.log(undefined || 0 || '' || 'Hello' || 23 || null);
 
 restaurant.numGuests = 0;
-const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+let guests1 = restaurant.numGuests ? restaurant.numGuests : 10; // 10
+// 0 is considered as falsy value. so second value is selected
+// so, this raises a problem as the real guest number can be 0.
+// how to solve this?
+// SOL:using nullish coalescing operator.
 console.log(guests1);
 
+// NULLISH(??): only takes the second value if first value is null or undefined
+// this operator considres 0 and empty string(' ') as truthy value
+guests1 = restaurant.numGuests ?? 10; // now guests1 = 0;
+console.log(guests1);
 const guests2 = restaurant.numGuests || 10;
 console.log(guests2);
 
