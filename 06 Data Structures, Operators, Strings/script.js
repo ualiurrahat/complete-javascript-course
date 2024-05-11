@@ -124,7 +124,7 @@ document.querySelector('button').addEventListener('click', function () {
 
 /*
 ///////////////////////////////////////
-// Working With Strings - Part 2
+// Working With Strings - Part 3
 
 // Split and join
 console.log('a+very+nice+string'.split('+'));
