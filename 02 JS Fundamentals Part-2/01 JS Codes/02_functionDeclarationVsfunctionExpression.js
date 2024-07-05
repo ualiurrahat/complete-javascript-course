@@ -1,4 +1,4 @@
-// we can invoke funciton declaration before it is declared.
+// we can invoke function declaration before it is declared.
 console.log(greetDeclaration("tamanna"));
 
 // Function Declaration
@@ -9,6 +9,7 @@ function greetDeclaration(name) {
 // this will produce error.
 // function expression can not be called before it is written or initialized
 // console.log(greetExpression("murr"));
+
 // Function Expression
 var greetExpression = function (name) {
   return "Hello, " + name + "!";
