@@ -29,7 +29,7 @@ const addExpr = function (a, b) {
 var addArrow = (a, b) => a + b;
 
 // example
-
+console.log(numProducts);
 if (!numProducts) deleteProducts();
 var numProducts = 10;
 
@@ -42,6 +42,12 @@ function deleteProducts() {
 var x = 25;
 let y = 2;
 const z = 10;
-console.log(x === window.x);
-console.log(y === window.y);
-console.log(z === window.z);
+// window object can be seen only in the browser console.
+console.log(x === window.x); // true
+console.log(y === window.y); // false
+console.log(z === window.z); // false
+
+// Best Practices To Follow
+// 1. do't use var. Use const and let
+// 2. in order to write clean code, declare variables at the top of its scope.
+// 3. always declare all your functions first, then use them after declaration.

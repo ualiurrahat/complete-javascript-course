@@ -9,20 +9,22 @@ const alamin = {
     const age = 2024 - birthYear;
     console.log(age);
 
-    // solution 1
-    //const self = this; // to avoid error on the isMillionnaire funcion
+    // solution 1 : use a variable to store this pointer.
+    //const self = this; // to avoid error on the isMillionnaire function
     //const isMillionnaire = function () {
     //   console.log(this.year >= 1990 && this.year <= 2000);
     // this produces error, as isMillionnaire is just a regular function
     // and 'this' becomes undefined for this reason
     // so undefined.year produces error.
+    // now solution 1 code would be:
     //console.log(self.year >= 1990 && self.year <= 2000);
     //  };
     // isMillionnaire();
 
-    // solution 2
+    // solution 2: use array function
     const isMillionnaire = () => {
       console.log(this.year >= 1990 && this.year <= 2000);
+      console.log('He is a millionnaire!');
     };
     isMillionnaire();
   },

@@ -30,7 +30,7 @@ const rahat = {
   fullName: 'Ualiur Rahat',
   job: 'I wish I had one',
   calcAge: function () {
-    console.log(this); // whole rahat object
+    console.log(this); // whole rahat object is printed
   },
 };
 rahat.calcAge();
