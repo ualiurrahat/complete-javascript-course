@@ -69,7 +69,7 @@ console.log(pizza, risotto, otherFood);
 const { sat, ...weekdays } = restaurant.openingHours;
 console.log(weekdays);
 
-// 2) Functions
+// 2) Functions. this use is called REST paramters.
 const add = function (...numbers) {
   let sum = 0;
   for (let i = 0; i < numbers.length; i++) sum += numbers[i];
@@ -91,3 +91,9 @@ add(...x);
 
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 restaurant.orderPizza('mushrooms');
+//////////////////////////////////////////////
+/*The REST and The Spread both look exactly same
+but the work oppositely depending on where they have been used
+Spread is used where we would otherwise write values separated by commas
+REST pattern is used where we would write variable names separated by commas.
+ */

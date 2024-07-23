@@ -51,7 +51,7 @@ const newArr = [1, 2, ...arr];
 // Spread operator does not change the original array.
 console.log(newArr);
 
-console.log(...newArr);
+console.log(...newArr); // elements get separated and printed
 console.log(1, 2, 7, 8, 9); // both are same.
 
 // Adding a new menu using spread operator as array of menus.
@@ -71,8 +71,11 @@ console.log(menu);
 const str = 'rahat';
 const letters = [...str, ' ', 'S.'];
 console.log(letters);
-console.log(...str);
-// console.log(`${...str} Schmedtmann`); // can not use here
+console.log(...str); // same as console.log('r', 'a', 'h', 'a', 't');
+// NOTE: spread operator can not be used inside template literals
+// for eg: console.log(`${...str} Schmedtmann`);
+// can not use here.because it does not want multiple values separated by commas.
+
 // spread operator can be used in 2 ways.
 // i) either to build new array,or separate array elements by commas
 // ii) used as funciton arguments.

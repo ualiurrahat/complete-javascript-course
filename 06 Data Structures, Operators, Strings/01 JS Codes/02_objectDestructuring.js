@@ -57,9 +57,24 @@ let a = 111;
 let b = 999;
 const obj = { a: 23, b: 7, c: 14 };
 ({ a, b } = obj);
+// {a,b} = obj; gives syntax error. because JS considers {} as block
+// and then after this block, there is an equal = operator. So it gives syntax error
+// solution: wrap the code in a parenthesis,
+// so the code becomes: ( {a,b} = obj );
 console.log(a, b);
 
 // Nested objects
+
+// destructuring sat object from openingHours
+const { sat } = openingHours;
+console.log(sat);
+// destructuring open and close from sat object.
+const {
+  sat: { open, close },
+} = openingHours;
+console.log(open, close);
+
+// destructuring the nested fri object with default values.
 const {
   fri: { open: o, close: c },
 } = openingHours;
