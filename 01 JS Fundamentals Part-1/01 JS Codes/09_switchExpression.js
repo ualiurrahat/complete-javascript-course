@@ -1,15 +1,25 @@
-/*The switch keyword initiates the switch statement.
-The expression inside the parentheses after switch is evaluated once.
-Each case in the switch statement specifies a possible value for the expression.
-The break keyword exits the switch block after a case is executed. 
-If break is omitted, the next case will be executed even if it doesn't match.
-The default case is executed when none of the other cases match.
-*/
+/**
+ * Switch Statement in JavaScript
+ *
+ * The `switch` statement evaluates an expression once,
+ * then compares its value against multiple `case` clauses.
+ * When a matching `case` is found, its block executes.
+ *
+ * Important points:
+ * - The expression inside `switch(expression)` is evaluated once.
+ * - Each `case` specifies a potential matching value.
+ * - The `break` statement stops the switch from executing subsequent cases.
+ * - Omitting `break` causes "fall-through" behavior (execution continues to next case).
+ * - The optional `default` case runs if no cases match.
+ *
+ * Use switch when you have multiple possible values for a variable,
+ * especially when comparing for equality.
+ */
 
-// Define a variable
+// Define a variable to represent a day number (0 to 6)
 let day = 3;
 
-// Switch statement to determine the day of the week
+// Switch statement to print the name of the day based on `day` value
 switch (day) {
   case 0:
     console.log("Sunday");
@@ -33,5 +43,6 @@ switch (day) {
     console.log("Saturday");
     break;
   default:
+    // This runs if day is not 0-6
     console.log("Invalid day");
 }
