@@ -1,10 +1,10 @@
 'use strict';
-// Set: a data structure that holds only unique elements.
-// can containe multiple types of data in the same set
-// considers single entry even if multiple entries of
-// same element is entered in the set.
 
-// how to declare a set
+// ---------------------- Set in JavaScript ----------------------
+// A Set is a built-in JavaScript data structure that stores only **unique values**
+// Sets can store mixed types, but do NOT maintain order, and do NOT support element access via index
+
+// ---------------------- Creating a Set ----------------------
 const ordersSet = new Set([
   'Pasta',
   'Pizza',
@@ -13,47 +13,64 @@ const ordersSet = new Set([
   'Pasta',
   'Pizza',
 ]);
-// has same element more than one but
-// orderSet does not consider them.
-console.log(ordersSet);
+// Although there are repeated entries, the Set stores only unique elements
+console.log(ordersSet); // Output: Set(3) { 'Pasta', 'Pizza', 'Risotto' }
 
-// set enters each letter if strings is passed onto it.
-console.log(new Set('rahat'));
-// set functions:
-//size: to find size of site
-console.log(ordersSet.size);
-// has: to check if an element exists in the set
-console.log(ordersSet.has('Pizza'));
-console.log(ordersSet.has('Bread'));
-// add: add new element in an existing set
+// When we pass a string, Set stores each character as a unique entry
+console.log(new Set('rahat')); // Output: Set(5) { 'r', 'a', 'h', 't' }
+
+// ---------------------- Set Properties & Methods ----------------------
+
+// ✅ .size → Returns number of unique elements
+console.log(ordersSet.size); // 3
+
+// ✅ .has(value) → Checks if value exists in Set
+console.log(ordersSet.has('Pizza')); // true
+console.log(ordersSet.has('Bread')); // false
+
+// ✅ .add(value) → Adds a value (does nothing if already exists)
 ordersSet.add('Garlic Bread');
-ordersSet.add('Garlic Bread');
-// delete: delete an exiting item from set.
+ordersSet.add('Garlic Bread'); // Duplicate, won’t be added
+
+// ✅ .delete(value) → Removes a specific value
 ordersSet.delete('Risotto');
-// clear: to delete all items
-// ordersSet.clear();
-console.log(ordersSet);
 
-// looping over set
-for (const order of ordersSet) console.log(order);
+// ❌ .clear() → Removes all values from the Set
+// ordersSet.clear(); // Uncomment to empty the set
 
-// use case of set:
-// 1. to find unique elements in an array
+console.log(ordersSet); // Set(3) { 'Pasta', 'Pizza', 'Garlic Bread' }
+
+// ---------------------- Iterating Over a Set ----------------------
+for (const order of ordersSet) {
+  console.log(order); // Logs each unique order
+}
+
+// ---------------------- Use Cases of Sets ----------------------
+
+// ✅ 1. Remove Duplicates from an Array
 const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
-// const staffUniqueSet = new Set(staff)
 
-// creating unique elements from with the help of set
-// using spread operator.
+// Convert Set back to array using spread syntax
 const staffUnique = [...new Set(staff)];
-console.log(staffUnique);
+console.log(staffUnique); // ['Waiter', 'Chef', 'Manager']
 
-// we can do the same not even creating new array.
-// like this:
+// You can also directly check the number of unique roles
 console.log(
   new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size
-);
-// 2. to find unique letters in a string
-console.log(new Set('ualiurrahat').size);
+); // 3
+
+// ✅ 2. Count Unique Characters in a String
+console.log(new Set('ualiurrahat').size); // 7
+
+// ✅ 3. Looping through unique characters in a string
 for (const letter of new Set('ualiurrahat')) {
   console.log(letter);
 }
+
+// ---------------------- Summary ----------------------
+/*
+🔹 Set stores unique values only.
+🔹 No duplicates, no index access, unordered.
+🔹 Useful for filtering unique elements from arrays or strings.
+🔹 Common methods: add, delete, has, size, clear.
+*/
